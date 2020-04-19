@@ -1,0 +1,8 @@
+plates/__pycache__
+plates/bin
+plates/include
+plates/lib
+plates/lib64
+plates/share
+plates/pyenv.cfg
+.idea
