@@ -12,12 +12,29 @@ from matplotlib.colors import rgb2hex
 
 current_folder = pathlib.Path().absolute()
 images_folder = pathlib.Path.joinpath(current_folder, "images")
-testImage_1 = os.path.join(images_folder, "img1.jpg")
+testImage_1 = os.path.join(images_folder, "img7.jpg")
 
 img = openImage(testImage_1)
 imgNonCv2 = Image.fromarray(img)
 
-print(getMostFrequentColor(img))
+
+###place for Neural net #1
+
+###place for neuralnet #2
+
+
+'''
+after nn#2 get data:
+function to get gountry from csv
+fun to get rows
+
+plateInfo={
+    "Country" : "",
+    "has2rows": True,
+    "TopRowText": "123",
+    "BottomRowText": "456",
+}
+'''
 
 # window
 window = tk.Tk()
@@ -33,8 +50,8 @@ spacerLabel = tk.Label(text="       ")
 spacerLabel.grid(column=1, row=0)
 
 dataForRightPanel = {
-    "bgColor": rgb2hex(getMostFrequentColor(img) / 255),
-    "fgColor": "#ff0000",  # TODO
+    "bgColor": rgb2hex(getColorsInPlate(img)[0] / 255),
+    "fgColor": rgb2hex(getColorsInPlate(img)[1] / 255),
     "country": "PL",  # TODO
     "row1": "123",  # TODO
     "row2": "456"  # TODO
@@ -74,6 +91,7 @@ countryLabel.grid(column=5, row=2)
 
 countryValLabel = tk.Label(text=dataForRightPanel["country"])
 countryValLabel.grid(column=6, row=2)
+
 
 
 

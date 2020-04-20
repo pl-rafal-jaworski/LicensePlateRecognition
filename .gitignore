@@ -4,5 +4,5 @@ plates/include
 plates/lib
 plates/lib64
 plates/share
-plates/pyenv.cfg
+plates/pyvenv.cfg
 .idea
